@@ -1,0 +1,30 @@
+.fila-con-cuadrados {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .fila-con-cuadrados .cuadrado {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 25%;
+    height: auto; */
+    background-color: rgb(137, 94, 201);
+    border-radius: 30%;
+    /* display: inline-block; */
+    margin: 0 0.2rem;
+    width: 25%;
+  height: 25%;
+  display: inline-block;
+
+
+
+  }
+  /* .fila-con-cuadrados .cuadrado {
+    width: 25%;
+    height: 25%;
+    display: inline-block;
+    margin: 0 0.5rem;
+  } */
