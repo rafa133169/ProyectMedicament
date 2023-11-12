@@ -6,6 +6,8 @@ import API from './Pages/Pruebas';
 import Manana from './Components/Manana';
 import Tarde from './Components/Tarde';
 import Final from './Pages/MedicamentosFinal';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
