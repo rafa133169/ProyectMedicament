@@ -3,7 +3,8 @@ import './manana.css';
 
 function Tarde() {
   return (
-    <Table borderless className="fila-con-cuadrados" key={1}>
+    <div>
+    <Table borderless key={1} >
       <thead>
         <tr>
           <th></th>
@@ -18,9 +19,9 @@ function Tarde() {
         </tr>
       </thead>
       <tbody>
-        <tr className='fila-con-cuadrados'>
-          <td>Tarde</td>
-          <td>Paracetamol</td>
+        <tr>
+          <td style={{backgroundColor: "rgb(137, 94, 201)"}}>Tarde</td>
+          <td style={{backgroundColor: "red",borderRadius: '10%',margin: "0 0.2rem"}}>Paracetamol</td>
           <td>1 pastilla</td>
           <td>cada 8 horas</td>
           <td>2 dias</td>
@@ -31,10 +32,10 @@ function Tarde() {
         
       </tbody>
       <tbody>
-        <tr className='fila-con-cuadrados'>
-          <td>Tardesdsrdtfwretrdhtfwretytfh</td>
+        <tr>
+          <td>Tard efffr erfs r</td>
           <td>Paracetamowefgwdfgdfwefgwel</td>
-          <td>1 paweesfgdfwdfesgrdwrefwdesfdgrfstilla</td>
+          <td>1 pawees gdgrg rgfvgdt erg </td>
           <td>cada 8 horas</td>
           <td>2 dias</td>
           <td>no apto para embarazadas</td>
@@ -44,6 +45,8 @@ function Tarde() {
         
       </tbody>
     </Table>
+    <h1>holaaaa</h1>
+    </div>
   );
 }
 
