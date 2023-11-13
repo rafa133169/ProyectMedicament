@@ -1,9 +1,6 @@
 import Table from 'react-bootstrap/Table';
-<<<<<<< HEAD
 import Tarde from '../Components/Tarde';
-=======
 import '../Components/celdas.css'
->>>>>>> fb3614623afe8a26573c00687fbe78e744cbd598
 
 function Final() {
   return (
