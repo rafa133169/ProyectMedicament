@@ -1,7 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const Login = async () => {
+    try {
+      const response = await axios.post("http://localhost:4001/login", {
+        correo_electronico: email,
+        contrasena: password,
+      });
+
+      if (response.data.status) {
+        const idUsuario = response.data.respuesta;
+        console.log(idUsuario);
+        window.location.href = (`/home/${idUsuario}`);
+      } else {
+        console.log('Prueba con otro correo o contraseña');
+      }
+    } catch (error) {
+      console.error("Error al autenticar el usuario:", error);
+    }
+  };
   return (
     <section className="h-100 gradient-form" style={{ backgroundColor: '#DEF7FF' }}>
       <div className="container py-5 h-100">
@@ -28,6 +50,9 @@ const Login = () => {
                           id="form2Example11"
                           className="form-control"
                           placeholder="Ingresa tu correo"
+                          onChange={(e) =>{
+                            setEmail(e.target.value);
+                          }}
                         /> <br />
                         
                       </div>
@@ -38,13 +63,16 @@ const Login = () => {
                           id="form2Example22"
                           className="form-control"
                           placeholder='Ingresa tu contraseña'
+                          onChange={(e)=>{
+                            setPassword(e.target.value);
+                          }}
                         /> <br />
                         
                       </div>
                       <div className="text-center pt-1 mb-5 pb-1">
                         <button
                           className="btn btn-primary btn-block fa-lg gradient-custom-1 mb-3"
-                          type="button"
+                           onClick={Login}
                         >
                           Iniciar sesión
                         </button> <br />
