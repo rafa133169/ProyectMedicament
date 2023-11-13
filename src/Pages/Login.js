@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -19,17 +20,19 @@ const Login = () => {
                       <h4 className="mt-1 mb-5 pb-1">MediCrono</h4>
                     </div>
                     <form>
-                      <p>Inicia sesión con tu cuenta de usuario</p>
+                      <h2>Inicia sesión con tu cuenta de usuario</h2>
                       <div className="form-outline mb-4">
+                        <p>Correo</p>
                         <input
                           type="email"
                           id="form2Example11"
                           className="form-control"
-                          placeholder="Ingresa tu nombre de usuario"
+                          placeholder="Ingresa tu correo"
                         /> <br />
                         
                       </div>
                       <div className="form-outline mb-4">
+                        <p>Contraseña</p>
                         <input
                           type="password"
                           id="form2Example22"
@@ -49,9 +52,11 @@ const Login = () => {
                       </div>
                       <div className="d-flex align-items-center justify-content-center pb-4">
                         <p className="mb-0 me-2">No tienes una cuenta?</p>
+                        <Link to='/registro'>
                         <button type="button" className="btn btn-outline-danger">
                           Registrarse
                         </button>
+                        </Link>
                       </div>
                     </form>
                   </div>
