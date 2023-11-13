@@ -12,6 +12,7 @@ import Register from './pages/Register';
 import Mediodia from './Components/Mediodia';
 import Noche from './Components/Noche';
 import Necesario from './Components/Necesario';
+import Medstabla from './pages/Medstabla';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/mediodia' element={<Mediodia />}></Route>
         <Route path='/noche' element={<Noche />}></Route>
         <Route path='/necesario' element={<Necesario />}></Route>
+        <Route path='/tabla' element={<Medstabla />}></Route>
       
       </Routes>
    </BrowserRouter>

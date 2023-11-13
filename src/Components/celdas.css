@@ -38,7 +38,6 @@
 .table-spacing-tarde tbody tr:nth-child(odd) {
   background-color: #EECE9D; /* Color para las filas impares */
 }
-
 .table-spacing-tarde tbody tr:nth-child(even) {
   background-color: #F6AD6A; /* Color para las filas pares */
 }
@@ -46,6 +45,10 @@
 .table-spacing-medio tbody tr:nth-child(odd) {
   background-color: #F8E374; /* Color para las filas impares */
 }
+.table-spacing-medio tbody tr:nth-child(even) {
+  background-color: #c1c418; /* Color para las filas pares */
+}
+
 
 .table-spacing-noche tbody tr:nth-child(even) {
   background-color: #D4B7EB; /* Color para las filas pares */
