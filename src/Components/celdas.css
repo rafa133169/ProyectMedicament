@@ -1,0 +1,59 @@
+.fila-con-cuadrados {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.fila-con-cuadrados .cuadrado {
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 25%;
+    height: auto; */
+  background-color: rgb(137, 94, 201);
+  border-radius: 30%;
+  margin: 0 0.2rem;
+  width: 25%;
+  height: 25%;
+  display: inline-block;
+
+
+
+}
+
+
+/* .fila-con-cuadrados .cuadrado {
+    width: 25%;
+    height: 25%;
+    display: inline-block;
+    margin: 0 0.5rem;
+  } */
+
+.table-spacing {
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+
+.table-spacing th, 
+.table-spacing td {
+  background-color: transparent !important;
+}
+
+.table-spacing-noche tbody tr:nth-child(odd) {
+  background-color: #D4B7EB; /* Color para las filas impares */
+}
+
+.table-spacing-noche tbody tr:nth-child(even) {
+  background-color: #b781e1; /* Color para las filas pares */
+}
+
+
+.table-spacing-tarde tbody tr:nth-child(odd) {
+  background-color: #EECE9D; /* Color para las filas impares */
+}
+
+.table-spacing-tarde tbody tr:nth-child(even) {
+  background-color: #F6AD6A; /* Color para las filas pares */
+}
+

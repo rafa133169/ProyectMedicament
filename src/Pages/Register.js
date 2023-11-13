@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const Register = () => {
     const [nombre, setNombre] = useState("");
@@ -8,24 +8,27 @@ const Register = () => {
     const [contrasena, setContrasena] = useState("");
     const [contrasena2, setContrasena2] = useState("");
 
-    const Register = async () => {
-        if(contrasena === contrasena2){
-        const response = await axios.post("http://localhost:4001/agregarUsuario", {
-            nombre_usuario: nombre,
-            correo_electronico: correo,
-            contrasena: contrasena,
-            
-        });
+    const Registro = async () => {
+    
         
-        if (response.status === 200) {
-            window.location.href = "/";
-          alert('Usuario registrado correctamente')
-        } else{
-          console.log('Fallo en agregar usuario')
+        if(contrasena !== contrasena2){
+            alert("Las contraseñas no coinciden, Vuelve a intentarlo");
+            return;
         }
-      }else{
-        alert("Las contraseñas no coinciden, Vuelve a intentarlo")
-      }
+            
+            const response = await axios.post("http://localhost:4001/agregarUsuario", {
+                nombre_usuario: nombre,
+                correo_electronico: correo,
+                contrasena: contrasena,
+            });
+            if(response.data){
+              window.location.href = "/";
+              alert('Paciente registrado correctamente')
+            } else{
+              console.log('Fallo en agregar usuario')
+            }
+          
+      
     };
   return (
     <section className="h-100 gradient-form" style={{ backgroundColor: '#DEF7FF' }}>
@@ -44,7 +47,7 @@ const Register = () => {
                       />
                       <h4 className="mt-1 mb-5 pb-1">MediCrono</h4>
                     </div>
-                    <form onSubmit={Register}>
+                    <form onSubmit={Registro}>
                       <h2>Registrate con los siguientes datos</h2>
                       <div className="form-outline mb-4">
                         <p>¿Como te llamas?</p>
@@ -64,7 +67,7 @@ const Register = () => {
                         <p>¿Cual es tu correo?</p>
                         <input
                           type="email"
-                          id="form2Example11"
+                          id="form2Example1"
                           className="form-control"
                           placeholder="Ingresa tu Correo Electronico"
                           onChange={(e)=>{
@@ -77,7 +80,7 @@ const Register = () => {
                         <p>Nueva Contraseña</p>
                         <input
                           type="password"
-                          id="form2Example22"
+                          id="form2Example2"
                           className="form-control"
                           placeholder='Ingresa tu nueva contraseña'
                           onChange={(e)=>{
@@ -102,7 +105,7 @@ const Register = () => {
                       <div className="text-center pt-1 mb-5 pb-1">
                         <button
                           className="btn btn-primary btn-block fa-lg gradient-custom-1 mb-3"
-                          type="submit"
+                          type='submit'
                         >
                           Registrarse
                         </button> <br />

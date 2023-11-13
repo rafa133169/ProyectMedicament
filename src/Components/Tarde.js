@@ -4,7 +4,7 @@ import './celdas.css';
 function Tarde() {
   return (
     <div>
-      <Table borderless key={1} className='table-spacing'>
+      <Table borderless key={1} className='table-spacing table-spacing-tarde'>
         <thead>
           <tr>
             <th></th>
@@ -19,7 +19,13 @@ function Tarde() {
         </thead>
         <tbody>
           <tr>
-            <td>Tarde</td>
+            <td rowSpan={2}>
+              Tarde
+              <br />
+              <span role="img" aria-label="icono">
+                &#x1F48A; {/* Puedes cambiar esto por el icono que prefieras */}
+              </span>
+            </td>
             <td style={{ borderRadius: '0%', margin: "0 0.2rem" }}>Paracetamol</td>
             <td>1 pastilla</td>
             <td>cada 8 horas</td>
@@ -29,7 +35,6 @@ function Tarde() {
             <td>listo</td>
           </tr>
           <tr>
-            <td>Tard efffr erfs r</td>
             <td>Paracetamowefgwdfgdfwefgwel</td>
             <td>1 pawees gdgrg rgfvgdt erg </td>
             <td>cada 8 horas</td>
