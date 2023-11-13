@@ -18,7 +18,7 @@ const Login = () => {
         console.log(idUsuario);
         window.location.href = (`/home/${idUsuario}`);
       } else {
-        console.log('Prueba con otro correo o contraseña');
+        alert('Prueba con otro correo o contraseña');
       }
     } catch (error) {
       console.error("Error al autenticar el usuario:", error);

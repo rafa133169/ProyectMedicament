@@ -13,7 +13,7 @@ import Register from './Pages/Register';
 
 function App() {
   return (
-   <BrowserRouter>
+   <BrowserRouter> 
       <Routes>
         <Route path='/' element={<MedicationChart/>}></Route>
         <Route path='/Login' element={<Login />}></Route>
