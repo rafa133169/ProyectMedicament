@@ -6,29 +6,6 @@
   height: 60px;
 }
 
-.fila-con-cuadrados .cuadrado {
-  margin-left: auto;
-  margin-right: auto;
-  /* width: 25%;
-    height: auto; */
-  background-color: rgb(137, 94, 201);
-  border-radius: 30%;
-  margin: 0 0.2rem;
-  width: 25%;
-  height: 25%;
-  display: inline-block;
-
-
-
-}
-
-
-/* .fila-con-cuadrados .cuadrado {
-    width: 25%;
-    height: 25%;
-    display: inline-block;
-    margin: 0 0.5rem;
-  } */
 
 .table-spacing {
   border-collapse: separate;
@@ -57,3 +34,6 @@
   background-color: #F6AD6A; /* Color para las filas pares */
 }
 
+.table-spacing-tarde td {
+  margin-right: 10px;
+}
