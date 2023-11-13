@@ -1,53 +1,72 @@
-import React from "react";
-import { Table} from "react-bootstrap";
-import './celdas.css'
+import React,{ useState } from 'react';
+import Table from 'react-bootstrap/Table';
+import './celdas.css';
+import { WiDaySunny } from 'react-icons/wi';
 
-const Manana = () => {
-  const data = [
-    {
-      medication: "Paracetamol",
-      dosage: "1000 mg",
-      hour: "12:00",
-    },
-    {
-      medication: "Ibuprofeno",
-      dosage: "600 mg",
-      hour: "14:00",
-    },
-    {
-      medication: "Aspirina",
-      dosage: "500 mg",
-      hour: "16:00",
-    },
-  ];
 
+function Manana() {
   return (
-    <div className="fila-con-cuadrados">
-    <Table borderless>
-      <thead>
-        <tr className="cuadrados">
-          <th>Medicamentos</th>
-          <th>Dosis</th>
-          <th>Hora</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-        {data.map((row, index) => (
-          <tr key={index}>
-            <td>{row.medication}</td>
-            <td>{row.dosage}</td>
-            <td>{row.hour}</td> 
-            
-           
-
+    <div>
+      <Table borderless key={1} className='table-spacing table-spacing-manana'>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Medicamentos</th>
+            <th>Dosis</th>
+            <th>Frecuencia</th>
+            <th>Duracion</th>
+            <th>Comentarios</th>
+            <th>Siguiente Dosis</th>
+            <th>Seleccionar</th>
           </tr>
-        ))}
-        
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowSpan={4}>
+              Mañana
+              <br />
+              <WiDaySunny size={40} color='blue'/>
+             
+            </td>
+            <td style={{ borderRadius: '0%', margin: "0 0.2rem" }}>Paracetamol</td>
+            <td>1 pastilla</td>
+            <td>cada 8 horas</td>
+            <td>2 dias</td>
+            <td>no apto para embarazadas</td>
+            <td>2:00 pm</td>
+            <td>listo</td>
+          </tr>
+          <tr>
+            <td>Mew</td>
+            <td>1 pawees gdgrg rgfvgdt erg </td>
+            <td>cada 8 horas</td>
+            <td>2 dias</td>
+            <td>no apto para embarazadas</td>
+            <td>2:00 pm</td>
+            <td>listo</td>
+          </tr>
+          <tr>
+            <td>Lackadaisy</td>
+            <td>1 pawees gdgrg rgfvgdt erg </td>
+            <td>cada 8 horas</td>
+            <td>2 dias</td>
+            <td>no apto para embarazadas</td>
+            <td>2:00 pm</td>
+            <td>listo</td>
+          </tr>
+          <tr>
+            <td>Lackadaisy</td>
+            <td>1 pawees gdgrg rgfvgdt erg </td>
+            <td>cada 8 horas</td>
+            <td>2 dias</td>
+            <td>no apto para embarazadas</td>
+            <td>2:00 pm</td>
+            <td>listo</td>
+          </tr>
+        </tbody>
+      </Table>
     </div>
   );
-};
+}
 
 export default Manana;

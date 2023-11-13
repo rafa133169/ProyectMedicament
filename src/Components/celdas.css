@@ -26,6 +26,15 @@
 }
 
 
+.table-spacing-manana tbody tr:nth-child(odd) {
+  background-color: #DCDBFF; /* Color para las filas impares */
+}
+
+.table-spacing-manana tbody tr:nth-child(even) {
+  background-color: #aebbff; /* Color para las filas pares */
+}
+
+
 .table-spacing-tarde tbody tr:nth-child(odd) {
   background-color: #EECE9D; /* Color para las filas impares */
 }
@@ -34,6 +43,22 @@
   background-color: #F6AD6A; /* Color para las filas pares */
 }
 
-.table-spacing-tarde td {
-  margin-right: 10px;
+.table-spacing-medio tbody tr:nth-child(odd) {
+  background-color: #F8E374; /* Color para las filas impares */
+}
+
+.table-spacing-noche tbody tr:nth-child(even) {
+  background-color: #D4B7EB; /* Color para las filas pares */
+}
+
+.table-spacing-noche tbody tr:nth-child(odd) {
+  background-color: #C48DEF; /* Color para las filas impares */
+}
+
+.table-spacing-nec tbody tr:nth-child(even) {
+  background-color: #d5d5d5; /* Color para las filas pares */
+}
+
+.table-spacing-nec tbody tr:nth-child(odd) {
+  background-color: #a8a8a8; /* Color para las filas impares */
 }

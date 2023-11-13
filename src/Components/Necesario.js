@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import './celdas.css';
-import { WiNightClear } from 'react-icons/wi';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faCapsules } from '@fortawesome/free-solid-svg-icons';
 
-function Noche() {
+function Necesario() {
   return (
     <div>
-      <Table borderless key={1} className='table-spacing table-spacing-noche'>
+      <Table borderless key={1} className='table-spacing table-spacing-nec'>
         <thead>
           <tr>
             <th></th>
@@ -22,9 +23,9 @@ function Noche() {
         <tbody>
           <tr>
             <td rowSpan={4}>
-              Noche
+              Solo cuando sea necesario
               <br />
-              <WiNightClear size={40} color="purple" />
+                <FontAwesomeIcon icon={faCapsules} size="2x" color="grey" />
             </td>
             <td style={{ borderRadius: '0%', margin: "0 0.2rem" }}>Paracetamol</td>
             <td>1 pastilla</td>
@@ -67,4 +68,4 @@ function Noche() {
   );
 }
 
-export default Noche;
+export default Necesario;

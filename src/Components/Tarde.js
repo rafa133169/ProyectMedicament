@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import './celdas.css';
+import { WiSunset } from 'react-icons/wi';
 
 function Tarde() {
   return (
@@ -22,9 +24,7 @@ function Tarde() {
             <td rowSpan={4}>
               Tarde
               <br />
-              <span role="img" aria-label="icono">
-                &#x1F48A; {/* Puedes cambiar esto por el icono que prefieras */}
-              </span>
+              <WiSunset size={40} color="red" />
             </td>
             <td style={{ borderRadius: '0%', margin: "0 0.2rem" }}>Paracetamol</td>
             <td>1 pastilla</td>
@@ -57,7 +57,7 @@ function Tarde() {
             <td>1 pawees gdgrg rgfvgdt erg </td>
             <td>cada 8 horas</td>
             <td>2 dias</td>
-            <td>no apto para embarazadas</td>
+            <td></td>
             <td>2:00 pm</td>
             <td>listo</td>
           </tr>
