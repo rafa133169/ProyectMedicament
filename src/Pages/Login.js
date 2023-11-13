@@ -16,7 +16,7 @@ const Login = () => {
       if (response.data.status) {
         const idUsuario = response.data.respuesta;
         console.log(idUsuario);
-        window.location.href = (`/home/${idUsuario}`);
+        window.location.href = (`/tabla/${idUsuario}`);
       } else {
         alert('Prueba con otro correo o contraseña');
       }

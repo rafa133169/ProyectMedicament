@@ -29,7 +29,7 @@ function App() {
         <Route path='/mediodia' element={<Mediodia />}></Route>
         <Route path='/noche' element={<Noche />}></Route>
         <Route path='/necesario' element={<Necesario />}></Route>
-        <Route path='/tabla' element={<Medstabla />}></Route>
+        <Route path='/tabla/:id_usuario' element={<Medstabla />}></Route>
       
       </Routes>
    </BrowserRouter>
