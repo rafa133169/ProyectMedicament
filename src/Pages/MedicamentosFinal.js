@@ -1,5 +1,5 @@
 import Table from 'react-bootstrap/Table';
-import '../Components/manana.css'
+import '../Components/celdas.css'
 import Tarde from '../Components/Tarde';
 
 function Final() {

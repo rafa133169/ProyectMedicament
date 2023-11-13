@@ -1,6 +1,6 @@
 import React from "react";
 import { Table} from "react-bootstrap";
-import './manana.css'
+import './celdas.css'
 
 const Manana = () => {
   const data = [
