@@ -19,7 +19,7 @@ function Tarde() {
         </thead>
         <tbody>
           <tr>
-            <td rowSpan={2}>
+            <td rowSpan={4}>
               Tarde
               <br />
               <span role="img" aria-label="icono">
@@ -35,7 +35,25 @@ function Tarde() {
             <td>listo</td>
           </tr>
           <tr>
-            <td>Paracetamowefgwdfgdfwefgwel</td>
+            <td>Mew</td>
+            <td>1 pawees gdgrg rgfvgdt erg </td>
+            <td>cada 8 horas</td>
+            <td>2 dias</td>
+            <td>no apto para embarazadas</td>
+            <td>2:00 pm</td>
+            <td>listo</td>
+          </tr>
+          <tr>
+            <td>Lackadaisy</td>
+            <td>1 pawees gdgrg rgfvgdt erg </td>
+            <td>cada 8 horas</td>
+            <td>2 dias</td>
+            <td>no apto para embarazadas</td>
+            <td>2:00 pm</td>
+            <td>listo</td>
+          </tr>
+          <tr>
+            <td>Lackadaisy</td>
             <td>1 pawees gdgrg rgfvgdt erg </td>
             <td>cada 8 horas</td>
             <td>2 dias</td>
