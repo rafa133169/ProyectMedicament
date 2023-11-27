@@ -9,10 +9,14 @@ function crearReceta(request, response) {
   const cantidad = request.body.cantidad
   const dias = request.body.dias
   const intervalo = request.body.intervalo
+  const comentarios = request.body.comentarios
+  const estatus = request.body.estatus
+  const proxima = request.body.proximaToma
+
 
   connection.query(
-    `INSERT INTO Receta (usuario_id,medicamento_id,via_id,medida_id,dosis,dias,frecuencia_administracion) VALUES (?,?,?,?,?,?,?)`,
-    [usuario,medicamento,via,unidad,cantidad,dias,intervalo],
+    `INSERT INTO Receta (usuario_id,medicamento_id,via_id,medida_id,dosis,dias,frecuencia_administracion,comentarios,estatus,proximaHora) VALUES (?,?,?,?,?,?,?,?,?,?)`,
+    [usuario,medicamento,via,unidad,cantidad,dias,intervalo,comentarios,estatus,proxima],
     (error, results) => {
       if (error) {
         console.error("Error al ejecutar el procedimiento almacenado:", error);
@@ -27,26 +31,7 @@ function crearReceta(request, response) {
 function verRecetas(request, response) {
   const usuario = request.params.id_usuario;
   connection.query(
-    `SELECT 
-    usuario.*,
-    medicamentos.*,
-    viasAdministracion.*,
-    unidadMedida.*,
-    Receta.dosis,
-    Receta.dias,
-    Receta.frecuencia_administracion,
-    Receta.comentarios
-FROM 
-    Receta
-JOIN 
-    usuario ON Receta.usuario_id = usuario.id_usuario
-JOIN 
-    medicamentos ON Receta.medicamento_id = medicamentos.id_medicamento
-JOIN 
-    viasAdministracion ON Receta.via_id = viasAdministracion.id_via
-JOIN 
-    unidadMedida ON Receta.medida_id = unidadMedida.id_medida
-WHERE Receta.id_recta = ?;`,
+    `SELECT * FROM Receta WHERE Receta.usuario_id = ?;`,
     [usuario],
     (error, results) => {
       if (error) {

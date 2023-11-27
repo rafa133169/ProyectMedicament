@@ -1,0 +1,14 @@
+/* styles.css */
+.customAccordionHeader {
+    background-color: rgba(80, 65, 93, 0.67);
+    /* Otros estilos que desees agregar */
+  }
+
+  .titulo {
+    margin-bottom: 20px;
+    font-size: 44px;
+  }
+  .titulomini {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
